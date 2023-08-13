@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<!-- <html class="scroll-smooth"> -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/build.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body class="antialiased bg-gray-50 dark:bg-zinc-950">
+    <!-- First layer -->
+    <div class="w-full md:max-w-2xl lg:max-w-[52rem] xl:max-w-[67rem] 2xl:max-w-[77rem] md:mx-auto bg-white border border-x-gray-100">
+      <!-- Second Layer -->
+      <div class="w-full sm:mx-auto sm:max-w-[34rem] md:max-w-[37rem] lg:max-w-[46rem] xl:max-w-[60rem] 2xl:max-w-5xl">
+        <!-- Navigation -->
+        <nav id="home" class="flex flex-wrap items-center justify-between px-4 sm:px-0 py-5 md:py-8">
+          <!-- Brand -->
+          <div>
+            <a href="#" class="text-xl tracking-wider font-bold">Mario<span class="text-cyan-400">notes</span></a>
+          </div>
+          <div class="hidden md:flex">
+            <ul class="flex text-sm py-2 px-6 gap-x-10 font-semibold justify-center rounded-full drop-shadow-xl shadow-md border border-gray-200">
+              <li><a href="#home" class="hover:text-sky-400 py-[0.60rem] hover:border-b hover:border-b-sky-400 transition-all duration-300">About</a></li>
+              <li><a href="#socials" class="hover:text-sky-400 py-[0.60rem] hover:border-b hover:border-b-sky-400 transition-all duration-300">Socials</a></li>
+              <li><a href="#projects" class="hover:text-sky-400 py-[0.60rem] hover:border-b hover:border-b-sky-400 transition-all duration-300">Projects</a></li>
+              <li><a href="#uses" class="hover:text-sky-400 py-[0.60rem] hover:border-b hover:border-b-sky-400 transition-all duration-300">Uses</a></li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-x-2">
+            <!-- Dark mode toggle -->
+            <div class="flex">
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer" />
+                <div
+                  class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-cyan-400 dark:peer-focus:ring-cyan-600 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-cyan-400"
+                ></div>
+              </label>
+            </div>
+            <!-- Responsive navigation menu -->
+            <div class="group block md:hidden">
+              <button
+                id="dropdownMenu"
+                data-dropdown-toggle="dropdownMenuName"
+                data-dropdown-offset-distance="0"
+                data-dropdown-offset-skidding="-95"
+                class="flex items-center text-sm lg:text-base w-full text-syan-400 py-2 mx-0 lg:mx-3 xl:mx-4 lg:group-hover:font-bold lg:font-medium group-hover:text-cyan-400 font-normal dark:text-gray-200"
+                type="button"
+              >
+                <span class="sr-only">Open user menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.1" stroke="currentColor" class="w-8 h-8">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25"
+                  />
+                </svg>
+              </button>
+              <div id="dropdownMenuName" class="z-10 hidden bg-white border border-gray-200 dark:border-gray-700 divide-y divide-gray-200 rounded-lg shadow w-52 dark:bg-black dark:divide-gray-600">
+                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 space-y-2" aria-labelledby="dropdownMenu">
+                  <li>
+                    <a href="#home" class="flex items-center gap-x-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> About </a>
+                  </li>
+                  <li>
+                    <a href="#responsiveSocials" class="flex items-center gap-x-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> Socials </a>
+                  </li>
+                  <li>
+                    <a href="#responsiveSocials" class="flex items-center gap-x-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> Socials </a>
+                  </li>
+                  <li>
+                    <a href="#projects" class="flex items-center gap-x-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> Projects </a>
+                  </li>
+                  <li>
+                    <a href="#uses" class="flex items-center gap-x-2 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"> Uses </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- /Navigation -->
+
+        <!-- About -->
+        <header class="mt-7 px-4 sm:px-0 sm:mt-20">
+          <div class="grid col-span-1 lg:grid-cols-12 gap-4">
+            <div class="col-span-6 order-2 lg:order-1">
+              <div class="space-y-5">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-wide"><span class="block">I’m Mario.</span> I live in Parepare Indonesia, where I upgrade myself.</h2>
+                <p class="text-sm text-gray-600 tracking-wide leading-loose">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium aliquam hic, ipsum quas minus, provident suscipit eum illo consequuntur aut eligendi animi voluptas! Provident atque eaque voluptatibus minima
+                  exercitationem, reprehenderit eius earum.
+                </p>
+                <p class="text-sm text-gray-600 tracking-wide leading-loose">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium aliquam hic, ipsum quas minus, provident suscipit eum illo consequuntur aut eligendi animi voluptas! Provident atque eaque voluptatibus minima
+                  exercitationem, reprehenderit eius earum.
+                </p>
+                <p class="text-sm text-gray-600 tracking-wide leading-loose">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi praesentium aliquam hic, ipsum quas minus, provident suscipit eum illo consequuntur aut eligendi animi voluptas! Provident atque eaque voluptatibus minima
+                  exercitationem, reprehenderit eius earum.
+                </p>
+              </div>
+              <!--  -->
+              <div id="responsiveSocials" class="grid lg:hidden mt-6">
+                <h4 class="text-lg sm:text-2xl font-semibold">Found me on socials.</h4>
+                <div class="border-b border-b-gray-300 my-5"></div>
+                <ul class="text-gray-600 font-medium space-y-3">
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                      ></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://github.com/mariio46/" target="_blank" rel="noopener noreferrer">Github</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                      <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                      <path d="M16.5 7.5l0 .01"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://www.instagram.com/mario46_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                      <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://twitter.com/Mario46_" target="_blank" rel="noopener noreferrer">Twitter</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://www.facebook.com/maario46/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                  </li>
+                </ul>
+                <div class="border-b border-b-gray-300 my-5"></div>
+                <ul class="text-gray-600 font-medium space-y-3">
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+                      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="mailto:mario.notes2296@gmail.com" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                      <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>
+                      <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6"></path>
+                      <path d="M17 18h2"></path>
+                      <path d="M20 15h-3v6"></path>
+                      <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://wa.me/62895605544112" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M16 20h3a1 1 0 0 0 1 -1v-14a1 1 0 0 0 -1 -1h-3v16z"></path>
+                      <path d="M5 20h3v-16h-3a1 1 0 0 0 -1 1v14a1 1 0 0 0 1 1z"></path>
+                      <path d="M16 4l-4 4l-4 -4"></path>
+                      <path d="M4 6.5l8 7.5l8 -7.5"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="mailto:mario.notes2296@gmail.com" target="_blank" rel="noopener noreferrer">mario.notes2296@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-span-6 order-1 mb-5 lg:order-2 lg:mb-0">
+              <div class="grid justify-items-center">
+                <img src="/src/assets/image/profile-2.jpg" alt="mario" class="w-64 xl:w-96 h-auto rounded-2xl rotate-3 grayscale hover:grayscale-0 transition duration-300" />
+              </div>
+              <div id="socials" class="hidden lg:grid mx-14 my-5">
+                <h4 class="text-lg sm:text-2xl font-semibold">Found me on socials.</h4>
+                <div class="border-b border-b-gray-300 my-5"></div>
+                <ul class="text-gray-600 font-medium space-y-3">
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path
+                        d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                      ></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://github.com/mariio46/" target="_blank" rel="noopener noreferrer">Github</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"></path>
+                      <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                      <path d="M16.5 7.5l0 .01"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://www.instagram.com/mario46_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                      <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://twitter.com/Mario46_" target="_blank" rel="noopener noreferrer">Twitter</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://www.facebook.com/maario46/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                  </li>
+                </ul>
+                <div class="border-b border-b-gray-300 my-5"></div>
+                <ul class="text-gray-600 font-medium space-y-3">
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path>
+                      <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="https://wa.me/62895605544112" target="_blank" rel="noopener noreferrer">Whatsapp</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                      <path d="M5 12v-7a2 2 0 0 1 2 -2h7l5 5v4"></path>
+                      <path d="M5 18h1.5a1.5 1.5 0 0 0 0 -3h-1.5v6"></path>
+                      <path d="M17 18h2"></path>
+                      <path d="M20 15h-3v6"></path>
+                      <path d="M11 15v6h1a2 2 0 0 0 2 -2v-2a2 2 0 0 0 -2 -2h-1z"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="/src/assets/pdf/cv.pdf" target="_blank" rel="noopener noreferrer">Curriculum Vitae</a>
+                  </li>
+                  <li class="flex gap-x-3 group">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-6 h-6 group-hover:scale-125 transition duration-300"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.25"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M16 20h3a1 1 0 0 0 1 -1v-14a1 1 0 0 0 -1 -1h-3v16z"></path>
+                      <path d="M5 20h3v-16h-3a1 1 0 0 0 -1 1v14a1 1 0 0 0 1 1z"></path>
+                      <path d="M16 4l-4 4l-4 -4"></path>
+                      <path d="M4 6.5l8 7.5l8 -7.5"></path>
+                    </svg>
+                    <a class="hover:text-sky-400" href="mailto:mario.notes2296@gmail.com" target="_blank" rel="noopener noreferrer">mario.notes2296@gmail.com</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- /About -->
+
+        <!-- Projects -->
+        <section id="projects" class="mt-20 sm:mt-32 space-y-10">
+          <div class="space-y-5 px-4 sm:px-0">
+            <h2 class="max-w-2xl text-3xl sm:text-5xl font-bold">Things I’ve made trying to keep my feet in this path..</h2>
+            <p class="max-w-2xl text-sm sm:text-base text-gray-600 tracking-wide leading-loose">
+              I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you
+              have ideas for how it can be improved.
+            </p>
+          </div>
+          <!--  -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 justify-items-center">
+            <a href="https://studyclubinformatika.marionotes.com/" target="_blank" rel="noopener noreferrer" class="group">
+              <div class="w-full max-w-sm rounded-lg border border-gray-50 px-4 bg-white hover:bg-stone-50 hover:drop-shadow-lg transition-all duration-500">
+                <div class="flex flex-col space-y-5 my-6">
+                  <img class="w-16 h-16 rounded-full shadow p-2" src="/src/assets/image/sci.png" alt="Bonnie image" />
+                  <h5 class="font-medium text-gray-800">Study Club Informatika</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam libero ipsa itaque. Ad incidunt labore adipisci tempore esse vitae dicta vel asperiores, nobis quisquam officiis.
+                  </p>
+                  <span class="flex items-center gap-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.3" stroke="currentColor" class="w-4 h-4 group-hover:text-sky-400 transition duration-300 text-gray-400">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                      />
+                    </svg>
+                    <span class="group-hover:text-sky-400 transition duration-300 font-medium text-gray-400">studyclubinformatika.com</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="https://safoto.marionotes.com/" target="_blank" rel="noopener noreferrer" class="group">
+              <div class="w-full max-w-sm rounded-lg border border-gray-50 px-4 bg-white hover:bg-stone-50 hover:drop-shadow-lg transition-all duration-500">
+                <div class="flex flex-col space-y-5 my-6">
+                  <img class="w-16 h-16 rounded-full shadow p-2" src="/src/assets/image/safoto.png" alt="Bonnie image" />
+                  <h5 class="font-medium text-gray-800">Safoto Gallery</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam libero ipsa itaque. Ad incidunt labore adipisci tempore esse vitae dicta vel asperiores, nobis quisquam officiis.
+                  </p>
+                  <span class="flex items-center gap-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.3" stroke="currentColor" class="w-4 h-4 group-hover:text-sky-400 transition duration-300 text-gray-400">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                      />
+                    </svg>
+                    <span class="group-hover:text-sky-400 transition duration-300 font-medium text-gray-400">safotostudio.com</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+            <a href="https://studyclubinformatika.marionotes.com/" target="_blank" rel="noopener noreferrer" class="group">
+              <div class="w-full max-w-sm rounded-lg border border-gray-50 px-4 bg-white hover:bg-stone-50 hover:drop-shadow-lg transition-all duration-500">
+                <div class="flex flex-col space-y-5 my-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-16 h-16 p-2">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                    />
+                  </svg>
+                  <h5 class="font-medium text-gray-800">Social App</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam libero ipsa itaque. Ad incidunt labore adipisci tempore esse vitae dicta vel asperiores, nobis quisquam officiis.
+                  </p>
+                  <span class="flex items-center gap-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.3" stroke="currentColor" class="w-4 h-4 group-hover:text-sky-400 transition duration-300 text-gray-400">
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"
+                      />
+                    </svg>
+                    <span class="group-hover:text-sky-400 transition duration-300 font-medium text-gray-400">socialapp.com</span>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </section>
+        <!-- /Projects -->
+
+        <!-- Uses -->
+        <section id="uses" class="mt-20 sm:mt-40 space-y-10">
+          <div class="space-y-5 px-4 sm:px-0">
+            <h2 class="max-w-2xl text-3xl sm:text-5xl font-bold">Software i use, Gadgets i use, and other things.</h2>
+            <p class="max-w-2xl text-sm sm:text-base text-gray-600 tracking-wide leading-loose">
+              I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff.
+            </p>
+          </div>
+
+          <div class="px-4 md:px-0 space-y-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 space-y-12 md:space-y-0 md:border-l md:border-l-gray-200 py-10">
+              <div class="col-span-1">
+                <h4 class="font-semibold text-gray-800 md:pl-5">Workstation</h4>
+              </div>
+              <div class="col-span-2 md:max-w-sm space-y-8">
+                <div class="space-y-1">
+                  <h5 class="font-medium text-gray-800">MSI Modern 15 - A11Sb (2021)</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">with intel core i7 11th Gen, 16Gb of Memory, and 512GB NVMe plus i add it 1TB NVMe storage is enough for carry my daily work.</p>
+                </div>
+                <div class="space-y-1">
+                  <h5 class="font-medium text-gray-800">Xiaomi Redmi Note 9 Pro - (2020)</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">
+                    this phone come with 128Gb Storage and 8GB of RAM and its worth it to use. i'm not into mobile gaming so i don't need a expensive phone, i just need bigger storage.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="grid grid-cols-1 md:grid-cols-3 space-y-12 md:space-y-0 md:border-l md:border-l-gray-200 py-10">
+              <div class="col-span-1">
+                <h4 class="font-semibold text-gray-800 md:pl-5">Development tools</h4>
+              </div>
+              <div class="col-span-2 md:max-w-sm space-y-8">
+                <div class="space-y-1">
+                  <h5 class="font-medium text-gray-800">Visual Studio Code</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">
+                    in 2019 after watching Sandhika Galih on Youtube, i decided to move from Sublime Text to VSCode due to many factors. one of them is theme's and extension's.
+                  </p>
+                </div>
+                <div class="space-y-1">
+                  <h5 class="font-medium text-gray-800">VSCode Theme</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">my one and only theme is One Dark Pro with darker variant, my eyes is really in love with that theme beceuse of the simplicity.</p>
+                </div>
+                <div class="space-y-1">
+                  <h5 class="font-medium text-gray-800">Font</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">Consolas, i think its a default font from VSCode (CMIIW), i don't really care about font as long my line height is 40.</p>
+                </div>
+                <div class="space-y-1">
+                  <h5 class="font-medium text-gray-800">Windows Terminal</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">
+                    there is so many cool features in this terminal, but i really love the multiple tabs and panes its so usefull when i want to develop more than one of my laravel projects.
+                  </p>
+                </div>
+                <div class="space-y-1">
+                  <h5 class="font-medium text-gray-800">Laragon</h5>
+                  <p class="text-sm text-gray-600 tracking-wide leading-relaxed font-light">
+                    the best and faster local server for windows, like they said <span class="italic font-normal">"Modern & Powerful - Easy Operation Productive. Portable. Fast. Effective. Awesome!"</span>, and its just 💯.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /Uses -->
+
+        <!-- Footer -->
+        <section class="mt-20 sm:mt-40 border-t border-t-gray-200">
+          <div class="flex flex-col items-center justify-center gap-5 py-10">
+            <div class="px-4 sm:px-0">
+              <ul class="flex items-center gap-x-8 font-semibold text-gray-700">
+                <li><a href="#home">About</a></li>
+                <li><a href="#responsiveSocials">Socials</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#uses">Uses</a></li>
+              </ul>
+            </div>
+            <div class="px-4 sm:px-0">
+              <h5 class="text-gray-400">
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                marionotes.com - All rights reserved.
+              </h5>
+            </div>
+          </div>
+        </section>
+        <!-- /Footer -->
+        <!-- <div class="mb-[10000px]"></div> -->
+      </div>
+    </div>
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
+</html>
