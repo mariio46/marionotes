@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build": "npx tailwindcss -o build.css --minify"
+    "build": "npx tailwindcss -o /dist/build.css --minify"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
