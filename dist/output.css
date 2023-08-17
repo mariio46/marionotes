@@ -2256,6 +2256,10 @@ body {
     margin-top: 10rem;
   }
 
+  .sm\:mt-32 {
+    margin-top: 8rem;
+  }
+
   .sm\:max-w-\[34rem\] {
     max-width: 34rem;
   }
