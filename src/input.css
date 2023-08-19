@@ -12,4 +12,14 @@
   body {
     font-family: "Roboto";
   }
+  .btn {
+    @apply grid place-items-center shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.7)] border cursor-pointer transition-transform duration-[0.5s] p-[1.4em] rounded-[10px] border-solid border-[rgba(0,0,0,0)] hover:shadow-[inset_4px_4px_6px_-1px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_-1px_rgba(255,255,255,0.7),-0.5px_-0.5px_0px_rgba(255,255,255,1),0.5px_0.5px_0px_rgba(0,0,0,0.15),0px_12px_10px_-10px_rgba(0,0,0,0.05)] hover:border hover:translate-y-[0.5em] hover:border-solid hover:border-[rgba(0,0,0,0.1)];
+    background: #e3edf7;
+  }
+  .btn svg {
+    @apply transition-transform duration-[0.5s];
+  }
+  .btn:hover svg {
+    @apply fill-[#333333] scale-90;
+  }
 }
